@@ -1,0 +1,562 @@
+﻿
+     WEATHER TODAY
+
+
+A PROJECT REPORT
+
+Submitted by
+
+SMRUTIREKHA SWAIN (230301120202)
+CHENJERI SESHA SAHITI (230301120217)
+AARCHI KUMARI (230301120236)
+DIBYA SANKET PRADHAN (230301120243)
+NIGAMANANDA PRADHAN (230301120262)
+
+in partial fulfillment for the award of the degree of
+
+BACHELOR OF TECHNOLOGY
+in
+COMPUTER SCIENCE ENGINEERING
+
+DEPARTMENT OF COMPUTER SCIENCE ENGINEERING
+
+SCHOOL OF ENGINEERING AND TECHNOLOGY
+BHUBANESWAR CAMPUS
+CENTURION UNIVERSITY OF TECHNOLOGY AND MANAGEMENT
+ODISHA
+NOVEMBER 2025
+
+
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
+SCHOOL OF ENGINEERING AND TECHNOLOGY
+BHUBANESWAR CAMPUS
+BONAFIDE CERTIFICATE
+
+Certified that this project report "WEATHER TODAY" is the bonafide work of " (2303011202)" who carried out the project work under my supervision. This is to further certify to the best of my knowledge, that this project has not been carried out earlier in this institute and the university.
+
+
+
+SIGNATURE
+                                                                                                            Mr. Rasmi Prakash Swain 
+                                                                              Asst. Professor of Computer science & Engineering
+
+Certified that the above-mentioned project has been duly carried out as per the norms of the college and statutes of the university
+
+
+
+
+    SIGNATURE
+    MR. RAJ KUMAR MOHANTA
+    HEAD OF THE DEPARTMENT
+    
+
+
+
+
+
+
+
+
+
+
+DEPARTMENT SEAL
+
+DECLARATION
+
+I hereby declare that the project entitled "WEATHER TODAY" submitted for the "Minor Project" of 5th semester B. Tech in Computer Science and Engineering is my original work and the project has not formed the basis for the award of any Degree / Diploma or any other similar titles in any other University / Institute.
+
+Name of the Student: 
+Signature of the Student:
+Registration No: 
+Place: BHUBANESHWAR
+Date:
+
+
+
+
+
+
+
+
+
+
+
+
+
+ACKNOWLEDGEMENTS
+
+I wish to express my profound and sincere gratitude to Asst. Prof. Mr. Rasmi Prakash Swain, Department of Computer Science and Engineering, SoET, Bhubaneswar Campus, who guided me into the intricacies of this project nonchalantly with matchless magnanimity.
+I thank Asst. Prof. Raj Kumar Mohanta, Head of the Dept. of Department of Computer Science and Engineering, SoET, Bhubaneswar Campus and Dr. Prof. Sujata Chakravarthy, Dean, School of Engineering and Technology, Bhubaneswar Campus for extending their support during Course of this investigation.
+I would be failing in my duty if I don't acknowledge the cooperation rendered during various stages of image interpretation by Asst. Prof. Mr. Rasmi Prakash Swain.
+I am highly grateful to Asst. Prof. Mr. Rasmi Prakash Swain who evinced keen interest and invaluable support in the progress and successful completion of my project work.
+I am indebted to Asst. Prof. Mr. Rasmi Prakash Swain for their constant encouragement, co-operation and help. Words of gratitude are not enough to describe the accommodation and fortitude which they have shown throughout my endeavor.
+
+
+Name of the Student: 
+Signature of the Student:
+Registration No: 
+Place: BHUBANESHWAR
+Date:
+
+
+TABLE OF CONTENTS
+
+
+CHAPTER NO.	TITLE	PAGE NO.
+CERTIFICATE	i
+DECLARATION	ii
+ ACKNOWLEDGEMENT	iii
+
+1. CHAPTER - 1	INTRODUCTION
+1.1. Overview
+1.2. Objective
+1.3. Problem statement
+1.4. Scope of project
+1.5. Technologies used
+
+
+2. CHAPTER - 2 System Design and Requirements
+
+2.1. Introduction
+2.2. System Requirements
+2.3. System Architecture
+2.4. System Design
+2.5. Data flow
+2.6. Advantages of System Design
+3. CHAPTER-3 Implementation and Working
+
+3.1. Introduction
+3.2. Implementation Phases
+3.3. Working of the Application
+3.4. Major Kotlin Component Used
+3.5. Code Structure
+3.6. Output Example
+3.7. Advantages of Implementation
+
+4. CHAPTER - 4 Results and Snapshot
+
+4.1. Results
+4.2. Snapshots
+
+
+CONCLUSION
+FUTURE SCOPE
+REFERENCES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHAPTER-1
+Introduction
+1.1 Overview
+The Weather Today application is an Android-based app developed using Kotlin, designed to provide real-time weather updates and forecasts. It enables users to check current weather conditions of any city with detailed information such as temperature, humidity, wind speed, and weather description. The app uses data from reliable online weather APIs and presents it through a clean and user-friendly interface.
+1.2 Objective
+The primary objective of the Weather Today project is to develop an efficient, accurate, and easy-to-use weather forecasting application. It aims to:
+* Provide real-time weather updates from trusted online sources.
+* Enhance user experience with a simple and attractive UI.
+* Demonstrate the integration of Kotlin, API handling, and Android UI components.
+1.3 Problem Statement
+Weather prediction is an essential part of planning daily activities, yet many users struggle with finding reliable and fast sources of information. Existing solutions may be cluttered or lack location accuracy. Weather Today addresses these challenges by offering instant, accurate, and user-friendly weather information through a single mobile application.
+1.4 Scope of the Project
+The project mainly targets Android smartphone users who wish to check the weather quickly and conveniently. The app is developed using Kotlin and integrates the OpenWeatherMap API for fetching real-time data. Future improvements can include:
+* Adding weekly and hourly forecasts.
+* Voice-based weather search.
+* Push notifications for weather alerts.
+* Offline data caching for recently viewed locations.
+1.5 Features
+1.5.1 Real-Time Weather Updates
+The app displays real-time temperature, humidity, pressure, and wind speed by fetching live data from the OpenWeatherMap API.
+1.5.2 Location-Based Search
+Users can search weather conditions for any city globally. The app also supports automatic location detection using GPS.
+1.5.3 Weather Description and Icons
+Dynamic weather icons and brief textual descriptions (e.g., "Cloudy", "Sunny", "Rainy") make the app visually appealing and informative.
+1.5.4 Simple and Attractive UI
+The app uses Material Design principles to ensure a clean and intuitive interface that is easy to navigate.
+1.5.5 API Integration
+The app utilizes the OpenWeatherMap API for reliable weather data retrieval, demonstrating the integration of RESTful APIs in Kotlin-based Android applications.
+1.6 Technologies Used
+Component                   DescriptionProgramming Language                   KotlinIDE                   Android StudioAPI Used                   OpenWeatherMap APIUI Design                   XML, Material DesignLibraries                   Retrofit (for API calls), Glide (for images/icons)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHAPTER-2
+System Design and Requirements
+2.1 Introduction
+This chapter outlines the hardware and software requirements, system architecture, and design components used in the development of the Weather Today application. Proper system design ensures smooth functioning, scalability, and maintainability of the application.
+2.2 System Requirements
+2.2.1 Hardware Requirements
+ComponentMinimum SpecificationProcessorDual Core or higherRAM4 GB or aboveStorageMinimum 2 GB free spaceDeviceAndroid smartphone (Android 8.0 and above)Display5-inch or larger screen recommended2.2.2 Software Requirements
+ComponentSpecificationOperating SystemWindows / macOS / LinuxDevelopment IDEAndroid Studio (latest version)Programming LanguageKotlinDatabaseNone (API-based data fetching)API ServiceOpenWeatherMap APIEmulator / DeviceAndroid Emulator or Real Android Device
+2.3 System Architecture
+The Weather Today app follows a client-server architecture, where the client (mobile app) sends requests to an external weather API and receives JSON responses containing weather data.
+2.3.1 Client Side (Mobile App)
+* Developed using Kotlin and Android Studio.
+* Contains UI components designed in XML.
+* Sends HTTP requests to the OpenWeatherMap API using Retrofit.
+* Parses and displays received data in a readable format.
+2.3.2 Server Side (API Provider)
+* The server (OpenWeatherMap) processes requests and returns weather information in JSON format.
+* The app uses this response to display temperature, humidity, wind speed, and weather descriptions.
+2.3.3 Data Flow Diagram (DFD - Level 0)
+User → Weather Today App → OpenWeatherMap API → JSON Response → Display Results to User
+2.4 System Design
+2.4.1 User Interface Design
+* Built using XML layouts and Material Design components.
+* Consists of a main activity for search and weather display.
+* Icons and color themes dynamically change based on weather conditions.
+2.4.2 Activity Diagram
+1. User opens the app.
+2. The app requests permission for location access (optional).
+3. User enters a city name or allows GPS-based location detection.
+4. The app fetches data via API call.
+5. The data is parsed and displayed on the screen.
+6. User can search again or refresh the data.
+2.4.3 Modules
+* Search Module: Handles user input for city name and validation.
+* API Module: Manages API calls using Retrofit and handles JSON responses.
+* Display Module: Updates UI with weather data, icons, and error messages if data is unavailable.
+2.5 Data Flow
+2.5.1 Input
+* City name entered by the user
+* GPS location (optional)
+2.5.2 Process
+* API request sent to OpenWeatherMap server.
+* JSON response parsed and converted into usable data models.
+2.5.3 Output
+* Displays temperature, weather description, humidity, and wind speed on the UI.
+
+2.6 Advantages of System Design
+* Modular structure for easy debugging and maintenance.
+* Real-time data updates from trusted API.
+* User-friendly interface with minimal navigation.
+* Lightweight application that works efficiently on low-end devices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHAPTER-3
+Implementation and Working
+3.1 Introduction
+This chapter describes the step-by-step implementation of the Weather Today application. It explains how the application was developed using Kotlin, integrated with the OpenWeatherMap API, and structured to provide users with real-time weather data. The implementation process includes user interface creation, API setup, data fetching, and display logic.
+3.2 Implementation Phases
+3.2.1 Phase 1 - Setting Up the Project Environment
+* Installed Android Studio and configured the required SDK tools.
+* Created a new project using Kotlin as the main programming language.
+* Configured Gradle dependencies for Retrofit, Glide, and other required libraries.
+3.2.2 Phase 2 - Designing the User Interface (UI)
+* Created XML layouts for the main activity.
+* Used Material Design components such as buttons, text fields, and card views.
+* Designed a clean and minimal interface that displays weather information clearly.
+3.2.3 Phase 3 - API Integration
+* Registered on OpenWeatherMap to obtain an API key.
+* Integrated Retrofit library for API calls.
+* Sent HTTP GET requests to fetch weather data in JSON format.
+* Parsed the received JSON response to extract weather details such as temperature, humidity, and description.
+3.2.4 Phase 4 - Data Processing and Display
+* Converted JSON data into Kotlin data models.
+* Displayed extracted data dynamically in text views and image views.
+* Used Glide to load weather condition icons based on API response.
+3.2.5 Phase 5 - Testing and Debugging
+* Tested the app on multiple Android versions and screen sizes.
+* Fixed errors related to API key access, internet permission, and layout issues.
+* Ensured smooth and stable performance of the app.
+3.3 Working of the Application
+3.3.1 Step 1 - App Launch
+When the user opens the app, the splash screen or main activity is displayed. It initializes UI components and checks for internet connectivity.
+3.3.2 Step 2 - User Input
+The user enters a city name or allows the app to detect their current location using GPS.
+3.3.3 Step 3 - Fetching Data from API
+The entered city name is sent to the OpenWeatherMap API through a Retrofit call. The API returns a JSON response containing weather details.
+3.3.4 Step 4 - Parsing and Displaying Data
+The JSON response is parsed to extract weather details like:
+* Temperature (in °C)
+* Humidity (in %)
+* Wind speed (in m/s)
+* Weather condition (e.g., Cloudy, Rainy)
+These values are displayed on the main screen with appropriate weather icons.
+3.3.5 Step 5 - Updating Weather Information
+Users can refresh or search for another city anytime. The app fetches and updates data dynamically without restarting.
+3.4 Major Kotlin Components Used
+3.4.1 Retrofit Library
+Used for making API requests to the OpenWeatherMap service. It simplifies network calls and handles responses efficiently.
+3.4.2 Coroutines
+Used to perform asynchronous tasks such as fetching data from the API without blocking the main thread.
+3.4.3 Data Classes
+Kotlin data classes were used to map JSON objects into structured Kotlin objects for easy access.
+3.4.4 Glide Library
+Used to load and display weather icons dynamically based on weather conditions.
+3.4.5 XML Layouts
+All UI screens were designed using XML layouts following Material Design guidelines.
+3.5 Code Structure (Simplified Overview)
+com.example.weathertoday
+│
+├── MainActivity.kt
+│   ├── Handles user input and API call
+│   └── Updates UI with weather data
+│
+├── model/
+│   └── WeatherResponse.kt   → Data class for JSON mapping
+│
+├── network/
+│   ├── ApiInterface.kt      → Defines Retrofit API endpoints
+│   └── ApiClient.kt         → Configures Retrofit instance
+│
+└── res/layout/
+    └── activity_main.xml    → UI design for main screen
+3.6 Output Example
+After entering a city name (e.g., "Hyderabad"), the app displays:
+* Temperature: 31°C
+* Weather Condition: Partly Cloudy
+* Humidity: 68%
+* Wind Speed: 4.2 m/s
+* Icon: ☁️ (Cloud symbol displayed via API)
+3.7 Advantages of Implementation
+* Real-time weather updates for any city.
+* Clean and interactive user interface.
+* Lightweight and responsive design.
+* Demonstrates use of modern Android development tools like Kotlin, Retrofit, and Material Design.
+
+
+
+
+
+
+
+
+
+
+CHAPTER-4
+Results and Snapshots
+4.1 Results
+The Weather Today application was successfully developed, tested, and executed on Android devices. It efficiently retrieves real-time weather data from the OpenWeatherMap API and displays it in a clear and interactive interface.
+The major outcomes of the project are as follows:
+* The app accurately fetches and displays temperature, humidity, wind speed, and weather conditions based on the entered city name.
+* API integration through Retrofit worked seamlessly, providing reliable data from external servers.
+* The UI design adheres to Material Design standards, offering a modern and minimal appearance.
+* The application functions smoothly across multiple Android versions and devices without crashes or lag.
+* Error handling was implemented to notify users when an invalid city name is entered or when there is no internet connection.
+Overall, the project met all its objectives and demonstrates the practical implementation of Kotlin, API communication, and Android UI design in a real-world mobile application.
+4.2 Snapshots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONCLUSION
+
+The Weather Today application has been successfully designed and developed using Kotlin, demonstrating the integration of modern Android technologies to provide real-time weather information to users in a simple and interactive way. The app retrieves live data from the OpenWeatherMap API, processes it efficiently, and displays key parameters such as temperature, humidity, wind speed, and general weather conditions with appealing visuals.
+Throughout the development process, various essential Android concepts were implemented - including API communication through Retrofit, JSON data parsing, asynchronous tasks using Coroutines, and responsive UI creation using XML and Material Design. The project not only focuses on technical implementation but also ensures user convenience through a clean, intuitive interface and smooth navigation.
+This application serves as an excellent example of how external data can be integrated with mobile platforms to deliver real-world functionality. It provides instant weather updates, ensuring users can plan their daily activities effectively. The lightweight design ensures fast performance, while effective error handling enhances reliability and user trust.
+In conclusion, Weather Today successfully meets its objectives of being a functional, accurate, and user-friendly weather forecasting app. It demonstrates practical knowledge of Android development, strengthens programming skills in Kotlin, and emphasizes the importance of combining technology with usability. The project can further be enhanced with additional features like weekly forecasts, notification alerts, and voice-based weather search to make it even more versatile and impactful.
+
+
+
+
+
+
+
+
+
+
+
+
+
+FUTURE SCOPE
+The Weather Today application has significant potential for further development and improvement. Although the current version effectively provides real-time weather updates, several enhancements can be incorporated in the future to make it more advanced, interactive, and user-oriented.
+1. Advanced Forecasting Features
+Future versions can include hourly and weekly forecasts, providing users with extended weather predictions for better planning of activities and travel.
+2. Location-Based Notifications
+The app can be improved by integrating push notifications or alerts that notify users about sudden weather changes, such as storms, heavy rain, or heatwaves, based on their current GPS location.
+3. Offline Access
+By implementing local data caching, users could access recently fetched weather data even without an active internet connection.
+4. Voice Assistance
+A voice-based weather search feature can be added using speech recognition APIs to allow users to check weather conditions hands-free.
+5. UI/UX Enhancements
+The interface can be made more dynamic by incorporating animations, dark mode, and custom themes for a richer user experience.
+6. Integration with Wearable Devices
+Future updates could extend compatibility with smartwatches and fitness bands, enabling users to view quick weather summaries directly from their wearable gadgets.
+7. Multilingual Support
+To increase accessibility, the app can be enhanced to support multiple languages, allowing users from diverse regions to interact with the application comfortably.
+
+
+
+
+
+
+
+
+
+REFERENCES
+[1] Youtube
+[2] Google.com
+[3] Open Weather Map
+
+
+ASSESSMENT
+Internal:
+SL NORUBRICSFULL MARKMARKS OBTAINEDREMARKS1Understanding the relevance, scope and dimension of the project10  2Methodology10  3Quality of Analysis and Results10  4Interpretations and Conclusions10  5Report 10   Total50  
+Date:								Signature of the Faculty
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COURSE OUTCOME (COs) ATTAINMENT
+
+➢ Expected Course Outcomes (COs):
+(Refer to COs Statement in the Syllabus)
+	________________________________________________________________________________
+________________________________________________________________________________
+	________________________________________________________________________________
+________________________________________________________________________________
+➢ Course Outcome Attained:
+How would you rate your learning of the subject based on the specified COs?
+	
+		1	2	3	4	5	6	7	8	9	10
+         LOW								         HIGH
+➢ Learning Gap (if any):
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+➢ Books / Manuals Referred:
+________________________________________________________________________________
+________________________________________________________________________________
+	________________________________________________________________________________
+________________________________________________________________________________
+
+Date:								Signature of the Student
+➢ Suggestions / Recommendations:
+(By the Course Faculty)
+________________________________________________________________________________
+________________________________________________________________________________
+	________________________________________________________________________________
+________________________________________________________________________________
+
+Date:								
+                                                                                                             Signature of the Faculty
+
+
+
+
+
+
+
+
+
+
+
+
